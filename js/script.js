@@ -33,6 +33,7 @@ let quotes = [
   {
     quote: 'They drew first blood, not me.',
     source: 'John Rambo',
+    actor: 'Sylvester Stallone',
     film: 'First Blood',
     year: 1982,
   },
@@ -117,7 +118,12 @@ function printQuote() {
     property courtesy of W3schools.com
   ***/
   document.body.style.backgroundColor = randomColour();
-  document.body.style.backgroundImage = "url('img/bruce-willis.png')";
+
+  // Just for fun - add background image from actor object
+  // Replace spaces with dashes courtesy of Stackoverflow:
+  // https://stackoverflow.com/questions/1983648/replace-spaces-with-dashes-and-make-all-letters-lower-case
+  let img = quote.actor.replace(/\s+/g, '-').toLowerCase();
+  document.body.style.backgroundImage = "url('img/" + img + ".png')";
 
 }
 
