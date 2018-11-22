@@ -124,21 +124,14 @@ function printQuote() {
   // https://stackoverflow.com/questions/1983648/replace-spaces-with-dashes-and-make-all-letters-lower-case
   let img = quote.actor.replace(/\s+/g, '-').toLowerCase();
   document.body.style.backgroundImage = "url('img/" + img + ".png')";
-
 }
 
 // Run the function to replace the quote in index.html
 printQuote();
 
 
-
-
-
 /***
-  When the "Show another quote" button is clicked, the event listener
-  below will be triggered, and it will call, or "invoke", the `printQuote`
-  function. So do not make any changes to the line of code below this
-  comment.
+  Original JavaScript
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
